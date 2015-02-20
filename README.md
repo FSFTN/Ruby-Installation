@@ -8,7 +8,7 @@
 
 ##We are now ready to install RVM:
 
-`bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)`
+`\curl -sSL https://get.rvm.io | bash -s stable --rails`
 
 ###...followed by,
 
