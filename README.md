@@ -1,3 +1,13 @@
+# Instructions to install dependencies for Ubuntu based distributions 
+##First, ensure you have your Fedora install up to date:
+
+`sudo apt-get update`
+
+##Next, let's install the prerequisites we will need:
+
+`sudo apt-get -y install curl git-core python-software-properties build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev libcurl4-openssl-dev `
+------------------------
+# Instructions to install dependencies for Fedora/RPM based distributions
 ##First, ensure you have your Fedora install up to date:
 
 `sudo yum update`
@@ -6,30 +16,34 @@
 
 `sudo yum install git-core curl make bzip2 gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel libxslt-devel sqlite sqlite-devel openssl openssl-devel`
 
-##We are now ready to install RVM:
+-------------------------
 
-`\curl -sSL https://get.rvm.io | bash -s stable --rails`
+# Instructions to install ruby using rbenv
+## Fire up your terminal, and copy paste the following commands 
 
-###...followed by,
+`git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`
 
-`echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bashrc`
+`echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`
 
-##Finally, reload your .bashrc file with the following command:
+`echo 'eval "$(rbenv init -)"' >> ~/.bashrc`
 
-`. .bashrc`
+Note: Zsh users please use `~/.zshrc` in place of `~/.bashrc`.
 
-##Ensure that RVM is loaded with the following command, which should output "rvm is a function":
+`git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
 
- `rvm | head -1`
+`source ~/.bashrc` or `source ~/.zshrc`
 
-##The following steps will install Ruby, Rails and the devise gem. Execute these in order:
-###first,
+`rbenv install  2.1.2`
 
-`rvm install 2.2.0`
+`source ~/.bashrc` or `source ~/.zshrc`
 
-###then...
+## Check if its all installed
 
-`rvm use 2.2.0 --default`
+`ruby -v`
+
+`gem -v`
+
+If either of it doesn't return the version, there is an error. 
 
 ###followed by...
 
@@ -37,12 +51,13 @@
 
 `gem install rails`
 
-`gem install devise`
+`gem install therubyracer`
 
-`rails new test_app`
+`rbenv rehash`
 
+## Check if rails is installed correctly 
 
-##The last step will create a sample rails application with all the required dependencies, it is very important.
+`rails -v`
 
 ###Now install heroku
 
@@ -55,5 +70,4 @@ http://www.postgresonline.com/journal/archives/329-An-almost-idiots-guide-to-ins
 
 `gem install pg`
 
-`sudo yum install nodejs npm`
 
