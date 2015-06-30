@@ -5,7 +5,8 @@
 
 ##Next, let's install the prerequisites we will need:
 
-`sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev`
+ 
+ `sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev`
 ------------------------
 # Instructions to install dependencies for Fedora/RPM based distributions
 ##First, ensure you have your Fedora install up to date:
